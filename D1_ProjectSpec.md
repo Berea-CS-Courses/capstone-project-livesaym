@@ -12,9 +12,10 @@ other than english, or into some other form that makes it difficult to understan
 english.
 
 ### Software Requirement Specifications
-1. This program will utilize the sockets library to maintain online functionality
-2. This program tkinter or a similar user intergace library to provide users with a GUI for them to interact with and type messages into
-3. There will need to be a database made for previous messages from users going back to a certain point (for example, this may only store the last 100 messages made with the
+1. The program will need to be able to run on Windows 10
+2. This program will utilize the sockets library to maintain online functionality
+3. This program tkinter or a similar user intergace library to provide users with a GUI for them to interact with and type messages into
+4. There will need to be a database made for previous messages from users going back to a certain point (for example, this may only store the last 100 messages made with the
 program) which will include the original message, the modified message, and who sent it. 
-4. There will also be a database for users, which will include usernames and potentially passwords users so they can log in. 
-5. There will need to be some sort of translation library to translate messages from english to whatever other language or form the messages might be in.
+5. There will also be a database for users, which will include usernames and potentially passwords users so they can log in. 
+6. There will need to be some sort of translation library to translate messages from english to whatever other language or form the messages might be in.
