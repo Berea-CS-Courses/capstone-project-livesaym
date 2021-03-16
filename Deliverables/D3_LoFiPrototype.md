@@ -1,4 +1,4 @@
-[Data Flow Diagram Rough Draft](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/Capstone%20Data%20Flow%20Diagram%20Draft%201.png)
+[Data Flow Diagram Rough Draft](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone_Data_Flow_Diagram_Draft_1.png)
 
 [User Flow Diagram](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone_User_Flow_Diagram.png)
 
