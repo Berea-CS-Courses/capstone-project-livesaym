@@ -64,3 +64,5 @@ Components in Descending Order of Importance:
        - “Random” is tentative; Could be every third word, the exact middle and ends of messages, etc.
    - Python translate OR Google translate/googletrans and pandas
 
+minor change
+
