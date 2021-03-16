@@ -35,3 +35,4 @@ In addition to a working final version that you will demo, you will submit your 
 
 By the end of the semester, you will have a working version of your system that you will demo and give a presentation to the class and other people from the community.
 
+Minor change
