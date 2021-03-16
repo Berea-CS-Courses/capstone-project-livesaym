@@ -1,6 +1,6 @@
 [Data Flow Diagram Rough Draft](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/Capstone%20Data%20Flow%20Diagram%20Draft%201.png)
 
-[User Flow Diagram Rough Draft](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/Capstone%20User%20Flow%20Diagram%20Draft%201.png)
+[User Flow Diagram Rough Draft](capstone-project-livesaym/Deliverables/Capstone User Flow Diagram Draft 1.png)
 
 Reflection: I know the full D3 isn't due yet, but so far the most difficult part has been trying to properly add files to markdown.
 I'm pretty sure I didn't do it correctly here, but none of the tutorials I looked at online were all that useful. I'm also not completley
