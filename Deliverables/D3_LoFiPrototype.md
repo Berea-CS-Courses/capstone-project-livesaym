@@ -1,12 +1,17 @@
+Data Flow Diagram
 ![Data Flow Diagram](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone-Data-Flow-Diagram-2021-03-16-1440.png)
 
-[User Flow Diagram](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone_User_Flow_Diagram.png)
+User Flow Diagram
+![User Flow Diagram](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone_User_Flow_Diagram.png)
 
-[Capstone Log In Screen](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone%20Log%20In%20Screen.PNG)
+Jog In Screen
+![Capstone Log In Screen](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone%20Log%20In%20Screen.PNG)
 
-[Capstone Create/Join Server Screen](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone%20Create%20or%20Join%20Server%20Screen.PNG)
+Join/Create Server Screen
+![Capstone Create/Join Server Screen](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone%20Create%20or%20Join%20Server%20Screen.PNG)
 
-[Capstone Main Chatroom Screen](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone%20Main%20Chatroom%20Screen.PNG)
+Main Chatroom Screen
+![Capstone Main Chatroom Screen](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone%20Main%20Chatroom%20Screen.PNG)
 
 
 Reflection: A major issue that I kept running into was learning how to properly insert images into markdown files. Even after having 
