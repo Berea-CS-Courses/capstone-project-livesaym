@@ -4,7 +4,10 @@ Data Flow Diagram
 User Flow Diagram
 ![User Flow Diagram](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone_User_Flow_Diagram.png)
 
-Jog In Screen
+Entity Relationship Diagram
+![Entity Relationship Diagram](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone-Entity-Relationship-Diagram-2021-03-17-2234.png)
+
+Log In Screen
 ![Capstone Log In Screen](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D3-LoFi-Prototype/Deliverables/images/Capstone%20Log%20In%20Screen.PNG)
 
 Join/Create Server Screen
