@@ -1,3 +1,7 @@
+Proof of Concept
+[Proof of Concept in Action](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D4_Proof-of-Concept/Deliverables/images/Capstone_D4_Progress_1.PNG)
+A screenshot of me running the main and client scripts in Pycharm.
+
 Concept Documentation
 The proof-of-concept as it exists requires the installation of the Pycharm program, the most up-to-date version of Python, and the sockets and tkinter libraries. 
 In order to run the proof-of-concept, you simply need to open the files in pycharm, run the “main” file, and then run the “client” file. The result is a GUI that
