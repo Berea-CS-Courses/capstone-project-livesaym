@@ -1,5 +1,4 @@
 Proof of Concept
-
 [Screenshot](https://github.com/Berea-CS-Courses/capstone-project-livesaym/blob/D4_Proof-of-Concept/Deliverables/images/Capstone_D4_Progress_1.PNG)
 
 A screenshot of me running the main and client scripts in Pycharm.
