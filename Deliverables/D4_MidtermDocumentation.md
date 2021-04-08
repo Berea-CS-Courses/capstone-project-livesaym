@@ -11,15 +11,15 @@ starting. Portions of the socket code in the server were taken from Stack Overfl
 Further Implementation
 Now that I have the basics of sockets and sending messages implemented, I hope to begin putting together a user interface for the client using the tkinter module. After that, I will need to begin using the json module to start saving messages into a database, which will give me some experience with building databases and having them be manipulated via tkinter GUI inputs. After that, I would want to start to attempt to implement the translation module, which will have to interact with the messages as they get stored in a database and would also require some modification to the database. The next step after that would be to
 
-Code
+Code  
 The code for the server creates a server socket and a list that will store the names of clients, and then defines a function for how to handle messages received
 from a client. Then, in a while true loop, it listens for any incoming connections and binds them to a socket while appending the list of clients. When the while true
-loop reveives a message from a connected client, it then decodes the data, prints the message and who its from in plaintext, and then sends it out to all other connected clients. The client code sets up its own sockets and then asks for a username. After the user puts one in, the code then starts a while true loop in which it will wait for any message that the user inputs and then encodes and sends it to the server. There is also code that will end the script if it detects and error, so it won't freeze up of something unexpected happens.
+loop reveives a message from a connected client, it then decodes the data, prints the message and who its from in plaintext, and then sends it out to all other connected clients. The client code sets up its own sockets and then asks for a username. After the user puts one in, the code then starts a while true loop in which it will wait for any message that the user inputs and then encodes and sends it to the server. There is also code that will end the script if it detects and error, so it won't freeze up of something unexpected happens.  
 
-The functionality of the code is mostly restricted to the sockets and user interface, and is thus somewhat limited compared to what I want to make it into by the end of this semester. The user interface and log in feature is basic and the translation capabilities is nonexistent. 
+The functionality of the code is mostly restricted to the sockets and user interface, and is thus somewhat limited compared to what I want to make it into by the end of this semester. The user interface and log in feature is basic and the translation capabilities is nonexistent.  
 
 Reflection  
 Now that I’ve created a working proof of concept, I feel a bit more confident in my ability to complete the project. One of the things that I thought was going
 to be one of the larger stumbling blocks was understanding sockets and how to implement them, since I haven't taken a class on them and they seemed very
 complicated. Now that I have implemented a working version of python sockets, I feel much more confident. As for what I think I’ll need help with, integrating
-different parts of the project, such as user interface and translation. 
+different parts of the project, such as user interface and translation.  
