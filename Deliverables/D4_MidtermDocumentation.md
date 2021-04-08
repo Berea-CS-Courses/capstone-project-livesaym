@@ -8,7 +8,7 @@ In order to run the proof-of-concept, you simply need to open the files in pycha
 displays messages sent by the client to the server, as well as the username of the client. Unfortunately, the program has an issue with not responding after 
 starting. Portions of the socket code in the server were taken from Stack Overflow. As for external tools, one would need a computer with the Windows 10 operating system on it and an internet connection, as well as the most up-to-date community version Pycharm and Anaconda. The modules being used so far include sockets, tkinter, select, errno, and sys. I will most likley also end up using other modules such a json or an equivalent data handling module, the threading module, and the goslate module, which connects to Google's translation API. Beyond that, I don't beleive that I will need any external dependencies. As far as I can tell, everything that I want to do with this project can be done with those tools, although there is always the possibility that I missed something.
 
-Further Implementation
+Further Implementation  
 Now that I have the basics of sockets and sending messages implemented, I hope to begin putting together a user interface for the client using the tkinter module. After that, I will need to begin using the json module to start saving messages into a database, which will give me some experience with building databases and having them be manipulated via tkinter GUI inputs. After that, I would want to start to attempt to implement the translation module, which will have to interact with the messages as they get stored in a database and would also require some modification to the database. The next step after that would be to
 
 Code  
