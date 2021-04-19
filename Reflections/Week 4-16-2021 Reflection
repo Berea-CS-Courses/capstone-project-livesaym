@@ -1,0 +1,24 @@
+Friday, 4/16/2021
+
+This week, I had made some progress in actually building my program, but due to the bug that I talked about in class
+I was unable to show anything, which is very frustrating. Before I had gotten the error message about to many requests
+to the Google translation server, I was able to get the broadcasted message translated to French, but it ran into the
+problem of freezing if it didn't recognize a word as English. This meant that slang, misspellings, and other languages
+would break the program. Seeing more problems pop up and having little new stuff to show after a week is incredibly 
+disheartening, especially since it feels like the work I put in doesn't really count if I don't have something (ideally 
+visual) to show.
+
+During the week, my goals shifted after Prof. Mario said that I should focus more on the core aspects of my program since we are 
+fairly far into the semester. I was going to make a log in screen and user database, but that is not a core part of my application,
+so I decided to put it off for now. I am now trying to implement the translation functionality of my program in which messages
+sent by clients will be translated into a different language by the server and then broadcast out so it will be difficult for
+other users to easily read the messages.
+
+Going forward, I want to find a way to work around the bug using the suggestions made in class. Suggestions such as putting
+the messages in a database, then translating and broadcasting the contents of said database, putting a sleep() command in order
+to prevent the code from querying the Google server too much, and try to refractor the code so that the function call isn't in a 
+while loop.
+
+The resources that I plan to use hasn't changed much, although I might want to consider using a different translation module
+as a potential way to get around the issue that I've been having. I can still use sockets, tkinter, and JSON for the other 
+parts of my project.

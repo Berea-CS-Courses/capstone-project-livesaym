@@ -1,0 +1,27 @@
+Friday, 4/9/2021
+
+As of now, I am feeling a lot more confident in my ability to complete this project. I have gotten the sockets woriking
+and I have some kind of user interface for both the server host as well as the client. I had a very persistent issue
+of the user interface freezing for the client, which made it impossible to demonstrate the application and thus needed to 
+be scrapped. After re-writting parts of the socket code to make it not just a single while true loop, I was able to get
+the UI working properly, and then I actually made a more fleshed out UI. It still has room for improvement of course, 
+especially since there is no UI element for features that I have not added in yet, such as translation or username/password
+log in information.
+
+Now that I have a basic userinterface, I want to begin to integrate a database of some sort. My first reaction is to
+try to begin storingchat in a database for the purposes of helping with translation and with people joining a chat server 
+late, but a user account database for the purposes of stpring and utilizing log in information would probably be useful,
+and also not to difficult to implement. It would also be something more flashy to show to people in the next reporting out,
+since the chat database would not have its own UI elements in the way that a log in screen would. 
+
+To be more specific about my goals, I am torn between wither a database for chat messages, or a database for log in
+information, which would include a log in screen for the user interface. The log in screen might take around 3 hours,
+assuming no major issues and including any time I might need to spend re-learning how to use the json module effectivley.
+I think that the chat message database might take a similar amount of time since both of these are implementations of 
+server side databases that the client would pull from when first connecting, but I assume that the chat database would be
+slightly more complicated since it would be updated everytime someone sends a message or joins.
+
+As for resources, I will still be using the Pycharm program to write the code, as well as the various python modules, such
+as sockets, tkinter and JSON. I don't see much reason to change that as my tools have not caused me any problems so far.
+Any resources that I will use to better understand the python modules that I will work with will most likley just be the
+first search result for whatever specific problem I have at the time, and thus I can't really predict what that will be.
