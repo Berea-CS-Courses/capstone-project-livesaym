@@ -22,3 +22,5 @@ while loop.
 The resources that I plan to use hasn't changed much, although I might want to consider using a different translation module
 as a potential way to get around the issue that I've been having. I can still use sockets, tkinter, and JSON for the other 
 parts of my project.
+
+Edit for pull request on 4/19/2021
