@@ -23,17 +23,23 @@ usernames = []
 
 gs = goslate.Goslate()
 
-conn = sqlite3.connect('database.db') # Access database.db
+conn = sqlite3.connect('database.db')
 
-cur = conn.cursor() # Create cursor for accessing messages table
+cur = conn.cursor()
 
-# def save_message(username, msg):
-#     print(username)
-#     print(msg)
-#     cur.execute("INSERT INTO messages VALUES (? , ?)", (username, msg))
-#     conn.commit()
-#     print("Saved to messages")
-#     return
+
+def save_message(username, msg):
+    print(username)
+    print(msg)
+    conn = sqlite3.connect('database.db') # Access database.db
+    cur = conn.cursor() # Create cursor for accessing messages table
+    params = (username, msg)
+    cur.execute("INSERT INTO messages (username, message) VALUES (? , ?)", params)
+    # ^Saves params (username, msg) to the 'messages' database, under columns (username, message)
+    conn.commit()
+    conn.close()
+    print("Saved to messages")
+    return
 
 
 def broadcast2(message): # Exists so when welcoming message gets broadcast, it won't get saved like regular messages
@@ -51,8 +57,7 @@ def broadcast(message):
     print(splitmsg)
     username = splitmsg[0]
     justMessage = splitmsg[1]
-    cur.execute("INSERT INTO messages (username, message) VALUES (? , ?)", (username, justMessage))
-    # save_message(username, justMessage)
+    save_message(username, justMessage)
     # print("Translating")
     # time.sleep(5) # Sleep is supposed to prevent 'HTTP Error 429: Too Many Requests' from appearing, but is inconsistent
     # translatedText = gs.translate(message,'fr') # Translation based og goslate module. Comment line out if Error 429 happens, to work on other aspects
