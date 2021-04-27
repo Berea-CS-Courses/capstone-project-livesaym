@@ -8,6 +8,7 @@ HOST = '127.0.0.1' # Can be '127.0.0.1' (Local machine for testing) or use ipcof
 # machine for IP
 PORT = 9090
 
+
 class Client:
 
     def __init__(self, host, port):
@@ -75,6 +76,7 @@ class Client:
                 if message == 'Username?':
                     self.sock.send(self.nickname.encode('utf-8'))
                 else:
+                    print("Recieved")
                     if self.gui_done:
                         self.text_area.config(state='normal')
                         self.text_area.insert('end', message)
@@ -87,6 +89,7 @@ class Client:
                 print("Oh no!")
                 self.sock.close()
                 break
+
 
 client = Client(HOST, PORT)
 
