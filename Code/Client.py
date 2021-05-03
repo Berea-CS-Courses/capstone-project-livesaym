@@ -76,7 +76,7 @@ class Client:
                 if message == 'Username?':
                     self.sock.send(self.nickname.encode('utf-8'))
                 else:
-                    print("Recieved")
+                    print("Received")
                     if self.gui_done:
                         self.text_area.config(state='normal')
                         self.text_area.insert('end', message)

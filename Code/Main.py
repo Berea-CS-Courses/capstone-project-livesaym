@@ -47,8 +47,9 @@ def save_message(username, msg):
 def translate_message(username, msg):
     potential_languages = ['de', 'ko', 'ja', 'la']
     chosen_language = random.choice(potential_languages)
-    print(potential_languages)
+    # print(potential_languages)
     translated_text = translator.translate(msg, lang_tgt=chosen_language)
+    print(translated_text)
     combined_text = (username + ': ' + translated_text + '\n')
     return combined_text
 
@@ -62,7 +63,7 @@ def broadcast2(message):
 
 def broadcast(message):
     print(message)
-    print("Decoding")
+    # print("Decoding")
     msg = message.decode('utf-8')
     print(msg)
     splitmsg = msg.split(':', 1)
@@ -70,7 +71,7 @@ def broadcast(message):
     username = splitmsg[0]
     just_message = splitmsg[1]
     print("Translating")
-    time.sleep(1)  # Supposed to prevent 'HTTP Error 429: Too Many Requests' from appearing,
+    # time.sleep(1)  # Supposed to prevent 'HTTP Error 429: Too Many Requests' from appearing,
     # translated_text = translator.translate(just_message, lang_tgt='de')
     combined_text = translate_message(username, just_message)
     # save_message(username, just_message)
