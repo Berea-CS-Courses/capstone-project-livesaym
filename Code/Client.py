@@ -88,5 +88,5 @@ class Client:
                 self.sock.close()
                 break
 
-client = Client(HOST, PORT)
 
+client = Client(HOST, PORT)

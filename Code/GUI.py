@@ -1,6 +1,5 @@
 import tkinter
 from tkinter import *
-from multiprocessing import Process,Queue,Pipe # Will be used to pass data between files
 
 
 class MyGUI(tkinter.Frame):
@@ -35,7 +34,7 @@ __all__ = ["start_gui", "start_output", "start_input", "print_output"]
 
 def start_gui():
     chat = tkinter.Tk()
-    #chat.pack() #Tutorial said this was necessary to make GUI elements functional, but only works w/o it
+    #chat.pack() # Tutorial said this was necessary to make GUI elements functional, but only works w/o it
     chat.title("Chat Application")
     return chat
 
@@ -60,8 +59,10 @@ def print_output(chat, output_box, msg):
     output_box.update()
     chat.update()
 
+
 def login_screen():
     pass
+
 
 def main():
     pass
@@ -74,4 +75,3 @@ if __name__ == "__main__":
     chat.mainloop()
 
     main()
-
