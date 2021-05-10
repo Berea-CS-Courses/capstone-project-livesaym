@@ -24,4 +24,4 @@ begin performing actual test on my application, in accordance with what is expec
 
 As for resources, I'm not sure what I will need for testing, beyond my other laptop. As for the rest of what I hope
 to accomplish, the same is true for this week as has been for the previous weeks; I'll be using Python and various
-modules including sockets, tkinter, sqlite3, and the Google translate module.
+modules including sockets, tkinter, sqlite3, and the new Google translate module.
