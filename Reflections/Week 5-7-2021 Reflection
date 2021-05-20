@@ -1,0 +1,27 @@
+Over the last week I had managed to implement a funtion to send chat history to newly connected clients. To do
+this, I had to connect to the database of messages and extract the username and messages of the server and send
+them to the new client on the order they were originally poseted. Currently, ther eis no limit to how far back
+the function will go in terms of sending old messages, meaning new clients could hypothetically get sent hundreds
+of messages. It also sends the untranslated message, but that is because the database that I had used was from before
+I had fully implemented the translation features.
+
+The main challenge that I had to overcome was acidentally overwriting some of my progress on building a new SQLite3
+table to save chat messages. Its pretty embarassing and I only nticed Wednesday night, but I was able to add back in
+what I lost since then. Going forward, I will be sure to double check what I upload to Github to make sure that this
+doesn't happen again. Getting used to manipulating databases using SQLite3 is also still a bit of a hurdle, although a 
+lot less of one now.
+
+My goals for the next week will be implementing a method to ensure that no two users in a server can have the same
+username. Ideally, this would be a system of username/password varification that is standard in social media, where 
+users would register with a username and password combination that would be saved and used elsewhere, although I don't
+consider that completely necessary. Considering the time restraints and advice given by the professors and classmates,
+I might instead just make a function that checks to make sure that a client who is trying to join the server isn't using
+a username that is already in use. I also hope to institute some method of allowing the client to switch between the translated
+and untranslated text on their end. I intend to try and do this by having the server save both the translated and untranslated 
+text of a message, and the client gets sent both of the versions of the message. The client can then use some kind of 
+user interface option, like a button, in order to switch between the two versions of the message. Finally, I hope to
+begin performing actual test on my application, in accordance with what is expected.
+
+As for resources, I'm not sure what I will need for testing, beyond my other laptop. As for the rest of what I hope
+to accomplish, the same is true for this week as has been for the previous weeks; I'll be using Python and various
+modules including sockets, tkinter, sqlite3, and the new Google translate module.

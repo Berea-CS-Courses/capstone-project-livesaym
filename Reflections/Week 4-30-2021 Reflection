@@ -1,7 +1,1 @@
-Over the last week, I have successfully implemented translation in the chat application.
 
-One of the challenges that I had to overcome was the HTTP error that I had talked about in class and in earlier reflections.
-
-Going forward, I hope to expand the databse of text messages to include the original english message as well as the translated message.
-
-I will continue to use Python and the SQLite3 module.
