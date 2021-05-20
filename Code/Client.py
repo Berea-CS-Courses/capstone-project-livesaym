@@ -4,9 +4,15 @@ import tkinter
 import tkinter.scrolledtext
 from tkinter import simpledialog
 
-HOST = '127.0.0.1' # Can be '127.0.0.1' (Local machine for testing) or use ipcofig in command line on server
+application_window = tkinter.Tk()
+
+HOST = simpledialog.askstring("Input", "What is the server's IP address?",
+                                 parent=application_window)
+
+# HOST = '127.0.0.1'  # Can be '127.0.0.1' (Local machine for testing) or use ipcofig in command line on server
 # machine for IP
 PORT = 9090
+
 
 class Client:
 
@@ -17,13 +23,13 @@ class Client:
         msg = tkinter.Tk()
         msg.withdraw()
 
-        self.nickname = simpledialog.askstring("Log In", "Please choose a username", parent = msg)
+        self.nickname = simpledialog.askstring("Log In", "Please choose a username", parent=msg)
 
         self.gui_done = False
         self.running = True
 
-        gui_thread = threading.Thread(target = self.gui_loop)
-        receive_thread = threading.Thread(target = self.receive)
+        gui_thread = threading.Thread(target=self.gui_loop)
+        receive_thread = threading.Thread(target=self.receive)
 
         gui_thread.start()
         receive_thread.start()
@@ -72,8 +78,12 @@ class Client:
         while self.running:
             try:
                 message = self.sock.recv(1024).decode('utf-8')
+                print(message)
                 if message == 'Username?':
                     self.sock.send(self.nickname.encode('utf-8'))
+                elif message == 'That username is already in use.':
+                    print("Please restart and try again")
+                    continue
                 else:
                     if self.gui_done:
                         self.text_area.config(state='normal')

@@ -13,7 +13,7 @@ class MyGUI(tkinter.Frame):
         tkinter.Frame.__init__(self)
         self.window = tkinter.Tk()
         self.window.pack()
-        self.window.Title("Chat Application")
+        self.window.Title("Chat Application (Server)")
         self.output_text = tkinter.Text(self.window, wrap=WORD, justify=LEFT)
         self.output_text.pack()
         self.input_box = tkinter.Entry(self.window, justify=LEFT)

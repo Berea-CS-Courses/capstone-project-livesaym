@@ -20,6 +20,8 @@ class StoredMessage(Base):
 
     id_number = Column(Integer, primary_key=True)
     username = Column(String)
+    message = Column(String)
+    translation = Column(String)
 
     def __init__(self, id_number, username, message, translation):
         self.id_number = id_number()

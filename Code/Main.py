@@ -25,9 +25,15 @@ usernames = []
 
 translator = google_translator()
 
+id_num = 1  # For iterating ID number while saving to messages2 table
+
 # conn = sqlite3.connect('database.db')
 
 # cur = conn.cursor()
+
+
+def test_func(client):
+    client.send('Uzbfer'.encode('utf-8'))
 
 
 def save_message(username, msg):
@@ -54,6 +60,24 @@ def translate_message(username, msg):
     return combined_text
 
 
+def translate_and_save_message(username, msg):
+    conn = sqlite3.connect('database.db')  # Access database.db
+    cur = conn.cursor()  # Create cursor for accessing messages table
+    potential_languages = ['de', 'ko', 'ja', 'la']
+    chosen_language = random.choice(potential_languages)
+    # print(potential_languages)
+    translated_text = translator.translate(msg, lang_tgt=chosen_language)
+    print(translated_text)
+    params = ( username, msg, translated_text)
+    print("Saving")
+    cur.execute("INSERT INTO messages (id_number, username, message, translation) VALUES (NULL, ?, ?, ?)", params)
+    conn.commit()
+    conn.close()
+    print("Saved to messages")
+    combined_text = (username + ': ' + translated_text + '\n')
+    return combined_text
+
+
 def broadcast2(message):
     # Exists so when welcoming message gets broadcast, it won't get saved like regular messages
     print("Broadcast 2")
@@ -61,9 +85,21 @@ def broadcast2(message):
         client.send(message)
 
 
+def broadcast_history(client):
+    conn = sqlite3.connect('database.db')  # Access database.db
+    cur = conn.cursor()  # Create cursor for accessing messages table
+    time.sleep(1)  # Wait for client GUI to finish building
+    for row in cur.execute("SELECT username, translation FROM messages "):
+        current_row = row
+        # print(current_row)
+        username, message = current_row
+        print(username + ': ' + message + '\n')
+        combined_message = username + ': ' + message + '\n'
+        client.send(combined_message.encode('utf-8'))
+
+
 def broadcast(message):
     print(message)
-    # print("Decoding")
     msg = message.decode('utf-8')
     print(msg)
     splitmsg = msg.split(':', 1)
@@ -71,9 +107,8 @@ def broadcast(message):
     username = splitmsg[0]
     just_message = splitmsg[1]
     print("Translating")
-    # time.sleep(1)  # Supposed to prevent 'HTTP Error 429: Too Many Requests' from appearing,
-    # translated_text = translator.translate(just_message, lang_tgt='de')
-    combined_text = translate_message(username, just_message)
+
+    combined_text = translate_and_save_message(username, just_message)
     # save_message(username, just_message)
     print("Translated!")
     # print(translated_text)
@@ -111,15 +146,20 @@ def receive():
         client.send("Username?".encode('utf-8'))
         username = client.recv(1024)
 
-        usernames.append(username)
-        clients.append(client)
+        if username in usernames:
+            client.send("That username is already in use.".encode('utf-8'))
+        else:
+            usernames.append(username)
+            clients.append(client)
 
-        print(f"User connected")
-        broadcast2(f"{username} connected to the server!\n".encode('utf-8'))
-        client.send("Connected to server".encode('utf-8'))
+            print(f"User connected")
+            broadcast2(f"{username} connected to the server!\n".encode('utf-8'))
+            client.send("Connected to server".encode('utf-8'))
 
-        thread = threading.Thread(target=handle, args=(client,))
-        thread.start()
+            broadcast_history(client)
+
+            thread = threading.Thread(target=handle, args=(client,))
+            thread.start()
 
 
 print(f'Listening for connections on {HOST}:{PORT}')
