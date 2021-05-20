@@ -8,7 +8,7 @@ application_window = tkinter.Tk()
 
 HOST = simpledialog.askstring("Input", "What is the server's IP address?",
                                  parent=application_window)
-
+# Input for server IP: 127.0.0.1 is default if on same machine
 # HOST = '127.0.0.1'  # Can be '127.0.0.1' (Local machine for testing) or use ipcofig in command line on server
 # machine for IP
 PORT = 9090
